@@ -13,13 +13,13 @@ public class RectangleInfo {
         boolean done = false;
         boolean done2 = false;
 
+
         do {
-
             System.out.print("Enter the width of the rectangle: ");
-
             if (in.hasNextDouble()) {
                 width = in.nextDouble();
                 done = true;
+                in.nextLine();
             } else {
                 trash = in.nextLine();
                 System.out.println("Please enter a numerical value, not " + trash);
@@ -27,10 +27,9 @@ public class RectangleInfo {
 
         } while (!done);
 
+
         do {
-
             System.out.print("Enter the height of the rectangle: ");
-
             if (in.hasNextDouble()) {
                 height = in.nextDouble();
                 done2 = true;
@@ -39,7 +38,9 @@ public class RectangleInfo {
                 System.out.println("Please enter a numerical value, not " + trash);
             }
 
+
         } while (!done2);
+
 
         area = width * height;
         perimeter = (width * 2) + (height * 2);
